@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav {    
+    width: 100%;
+    background-color: #4d4d4d;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.nav > .nav-header > .nav-title {
+    font-size: 22px;
+    padding: 0.5rem;
+    color: #fff; 
+    margin-right: 1rem;
+}
+
+.img-title {
+    width: 180px;
+    margin: -25px 0px 0px -5px;
+}
+
+.nav > .nav-links {
+    font-size: 18px;
+}
+
+.nav > #nav-check {
+    display: none;
+}
+
+.nav > .nav-btn {
+    display: block;
+}
+
+.nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+}
+
+.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee; 
+}
+
+.nav > .nav-links {
+    position: absolute; 
+    display: block; 
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden; 
+    top: 50px;
+    left: 0px; 
+}
+
+
+.nav > .nav-links > a {
+    display: block; 
+    width: 100%;
+    color: #efefef;
+    font-size: 18px;
+    margin: 0.7rem 0.5rem;
+}
+
+/*
+.nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+}
+*/
+
+.nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+ }
+
+ 
+@media (min-width:600px) {
+    .nav {
+        justify-content: start;
+    }
+
+    .nav > .nav-btn {
+        display: none;
+    }
+
+    .nav > .nav-links > a {
+        display: inline; 
+        text-decoration: none;
+        color: #efefef;
+        margin-right: 0.5rem;
+        cursor: pointer;
+    }
+      
+    .nav > .nav-links > a:hover {
+        color: rgba(0, 0, 0, 0.3);
+    } 
+
+    .nav > .nav-links {
+        position: static; 
+        width: initial;
+        background-color: transparent;
+        height: 100%;        
+        overflow-y: visible; 
+    }
+/*
+    nav > #nav-check:not(:checked) ~ .nav-links {
+        height: 20px;
+    }
+    */
+}
+  
