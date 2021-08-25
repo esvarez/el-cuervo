@@ -1,11 +1,51 @@
-* {
-    box-sizing: border-box;
-  }
-  
+body, html {
+    height: 100%;
+}
+
 body {
     margin: 0px;
     font-family: 'Roboto', sans-serif;
 }
+  
+.parallax {
+    /* The image used */
+    background-image: url("../img/cena.jpg");
+  
+    /* Full height */
+    height: 100vh;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.obscurecer:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.title-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    padding-left: 18rem;    
+}
+
+.title-text {
+   color: #eee; 
+   font-size: 100px;   
+   font-weight: bold;
+}
+
+/*
 
 .nav {    
     width: 100%;
@@ -91,7 +131,7 @@ body {
     height: 0px;
 }
 */
-
+/*
 .nav > #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
     overflow-y: auto;
@@ -127,5 +167,7 @@ body {
         height: 20px;
     }
     */
+    /*
 }
   
+*/
