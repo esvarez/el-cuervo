@@ -78,7 +78,13 @@ body {
     color: #efefef;
     font-size: 18px;
     margin: 0.7rem 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
 }
+
+.nav > .nav-links > a:hover {
+    color: rgba(0, 0, 0, 0.3);
+} 
 
 /*
 .nav > #nav-check:not(:checked) ~ .nav-links {
@@ -108,10 +114,6 @@ body {
         margin-right: 0.5rem;
         cursor: pointer;
     }
-      
-    .nav > .nav-links > a:hover {
-        color: rgba(0, 0, 0, 0.3);
-    } 
 
     .nav > .nav-links {
         position: static; 
